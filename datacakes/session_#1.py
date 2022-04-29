@@ -63,6 +63,46 @@ df = pd.read_csv(
 )
 df
 
+# %%
+# - how to deal with unmwanted columns,
+df.drop(
+    df.columns[
+        df.columns.str.contains(
+            "unnamed", case=False
+        )  # str. functions are a whole session in themselves,
+    ],
+    axis=1,  # specifies columns
+    inplace=True,  # we don't have to reasign
+)
+df
+# %%
+# TODO - drop empty columns, is neat, but won't work here.
+df.dropna(
+    how="all",
+    axis="columns",
+    inplace=True,
+)
+
+# %%
+# just don't import it when you read in the file.
+# TODO - read csv - read in only certain columns
+cols = [
+    "ID",
+    "first_name",
+    "resiidency",
+    "tenuure",
+]
+
+df = pd.read_csv(
+    f"{data}sample_1.csv",
+    names=cols,
+    header=None,
+    skiprows=1,
+    sep="\t",
+).set_index("ID")
+
+df
+
 
 # 0 index, will use the second row of the spreadsheet,
 
@@ -79,14 +119,6 @@ mydata08
 # %%
 
 
-# TODO - read csv - read in only certain columns
-cols = [
-    "ID",
-    "first_name",
-    "resiidency",
-    "tenuure",
-]
-
 # TODO - read csv - rename columns
 
 # TODO - read csv - WORD OF CAUTION, panda series, if you read in a single column, and you use this squeeze
@@ -102,6 +134,7 @@ df
 df = pd.read_csv()
 df
 # TODO - read csv - nrows, when you have a lot of time,
+
 
 # TODO - read large files,
 
