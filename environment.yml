@@ -1,0 +1,41 @@
+name: datacakes
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - m2r=0.2.1
+  - sphinx=3.4.3
+  - sphinx_rtd_theme=0.5.1
+  - pytest=6.2.1
+  - pytest-runner=5.1
+  - click=7.1.2
+  - black=^19.10b0
+  - coverage=5.0.1
+  - pytest-cov=2.11.1
+  - flake8 >= 3.7.9
+  - flake8-black >= 0.1.1
+  - pre-commit
+  - pre-commit-hooks=3.4.0
+  - darglint >=1.1.2
+  - flake8-annotations >= 2.0.0
+  - flake8-bugbear >= 20.1."
+  - flake8-docstrings >= 1.5.0
+  - flake8-import-order >= 0.18."
+  - mypy >= 0.761
+  - pytype >= 2020.1.8
+  - safety >= 1.8.5
+  - flake8 >= 3.7.9
+  - flake8-annotations >= 2.0.0
+  - flake8-black >= 0.1.1
+  - flake8-bugbear >= 20.1.2
+  - flake8-docstrings >= 1.5.0
+  - flake8-import-order >= 0.18.
+  - mypy >= 0.761
+  - pytype >= 2020.1.8
+  - safety >= 1.8.5
+  - pip
+  - pip:
+      - detect-secrets
+      - reorder-python-imports=2.4.0
+  
+  
