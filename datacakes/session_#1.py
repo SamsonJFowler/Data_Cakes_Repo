@@ -104,18 +104,34 @@ df = pd.read_csv(
 df
 
 
-# 0 index, will use the second row of the spreadsheet,
+# %%
+
+# download a csv file from the internet with ease
+medals_df = pd.read_csv(
+    "http://winterolympicsmedals.com/medals.csv",
+)
+medals_df
 
 
 # %%
-# TODO - useing usecols and nrows, to slice particualr sections out of csvs
-mydata08 = pd.read_csv(
+# using usecols and nrows, to slice particualr sections out of csvs
+medals_df = pd.read_csv(
     "http://winterolympicsmedals.com/medals.csv",
     usecols=[1, 5, 7],
     nrows=5,
 )
-mydata08
+medals_df
 
+# when you need to remove white space around a dataframe.
+
+
+# 0 index, will use the second row of the spreadsheet,
+
+
+# %%
+
+
+df
 # %%
 
 
@@ -123,11 +139,12 @@ mydata08
 
 # TODO - read csv - WORD OF CAUTION, panda series, if you read in a single column, and you use this squeeze
 df = pd.read_csv(
-    "aug_train.csv",
-    usecols=["gender"],
+    "sample_1.csv",
+    usecols=["first_name"],
     squeeze=True,
 )
 df
+# note this is different to a pandas dataframe.
 
 
 # TODO - read csv - skiprows
