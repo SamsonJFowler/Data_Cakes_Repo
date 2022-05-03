@@ -8,32 +8,34 @@ os.getcwd()
 # TODO - get a file
 
 # data dir
-data = (
-    "~\\code\\Data_Cakes_Repo\\data\\"
+data_dir = (
+    "~/code/Data_Cakes_Repo/data/"
 )
 
 
 # %%
 # TODO - read a csv
-df = pd.read_csv(f"{data}sample.csv")
+df = pd.read_csv(
+    f"{data_dir}sample.csv"
+)
 
 df
 # %% read csv - encoding, usually taken care
 df = pd.read_csv(
-    f"{data}sample.csv",
+    f"{data_dir}sample.csv",
     encoding="latin-1",
 )
 df
 # %% read csv - seps - setting default seperators,
 df = pd.read_csv(
-    f"{data}sample.csv",
+    f"{data_dir}sample.csv",
     encoding="utf-8",
     sep="\t",
 )
 df
 # %% - read csv - tsv files - sep= 't'
 df = pd.read_csv(
-    f"{data}sample.csv",
+    f"{data_dir}sample.csv",
     encoding="utf-8",
     sep=",",
     header=0,
@@ -43,7 +45,7 @@ df
 # %%
 # TODO - read csv - setting index column,
 df = pd.read_csv(
-    f"{data}sample.csv",
+    f"{data_dir}sample.csv",
     encoding="utf-8",
     sep=",",
     header=1,
@@ -55,7 +57,7 @@ df
 
 # TODO - read csv - setting head parameter, if you want to use a specifc row for your header,
 df = pd.read_csv(
-    f"{data}sample.csv",
+    f"{data_dir}sample.csv",
     encoding="utf-8",
     sep=",",
     header=1,
@@ -187,7 +189,7 @@ pd.read_csv(
 
 # Sometimes in our dataset, another type of symbol is used to make them missing values, so at that time to understand those values as missing, we use this parameter.
 pd.read_csv(
-    "sample.csv", na_values=["Null",]
+    "sample.csv", na_values=["Null"]
 )
 
 
